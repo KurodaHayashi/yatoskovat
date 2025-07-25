@@ -1,66 +1,68 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yasuyuki Toskovat' | Эксклюзивный мерч</title>
+    <title>Yasuyuki Toskovat'</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <div class="bg-blur"></div>
+    
+    <header class="glass-header">
         <div class="container">
             <h1 class="logo">Yasuyuki <span>Toskovat'</span></h1>
-            <nav>
-                <a href="#collection">Коллекция</a>
-                <a href="#about">О бренде</a>
-                <a href="https://t.me/ваш_телеграм" target="_blank">Заказать</a>
-            </nav>
-            <button class="theme-toggle">🌓</button>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
         </div>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="container">
-                <h2>Эксклюзивные вещи <br>для избранных</h2>
-                <a href="#collection" class="cta-button">Смотреть коллекцию</a>
+        <section class="hero glass-card">
+            <div class="hero-content">
+                <h2>Эксклюзивные вещи<br>для избранных</h2>
+                <p>Ограниченная коллекция 2024</p>
             </div>
         </section>
 
-        <section id="collection" class="collection">
-            <div class="container">
-                <h3>Коллекция</h3>
-                <div class="products">
-                    <div class="product">
-                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Футболка">
-                        <h4>Футболка "Минимал"</h4>
-                        <p>100% японский хлопок</p>
-                        <span class="price">25 000 ₽</span>
-                        <button>Добавить в корзину</button>
-                    </div>
-                    <div class="product">
-                        <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Худи">
-                        <h4>Худи "Тишина"</h4>
-                        <p>Французский кашемир</p>
-                        <span class="price">49 000 ₽</span>
-                        <button>Добавить в корзину</button>
-                    </div>
+        <section class="products">
+            <div class="product glass-card">
+                <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Футболка">
+                <div class="product-info">
+                    <h3>Футболка "Минимал"</h3>
+                    <p>100% японский хлопок</p>
+                    <span class="price">25 000 ₽</span>
+                </div>
+            </div>
+
+            <div class="product glass-card">
+                <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Худи">
+                <div class="product-info">
+                    <h3>Худи "Тишина"</h3>
+                    <p>Французский кашемир</p>
+                    <span class="price">49 000 ₽</span>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="about">
-            <div class="container">
-                <h3>О бренде</h3>
-                <p>Yasuyuki Toskovat' — это сочетание японской философии и европейского качества. Каждое изделие создаётся вручную ограниченным тиражом.</p>
-            </div>
+        <section class="about glass-card">
+            <h3>О бренде</h3>
+            <p>Yasuyuki Toskovat' — синтез японского минимализма и европейского качества. Каждое изделие создаётся вручную ограниченным тиражом.</p>
+            <a href="https://t.me/your_telegram" class="telegram-link">
+                <span>Заказать в Telegram</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z" fill="currentColor"/>
+                </svg>
+            </a>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>© 2024 Yasuyuki Toskovat'. Все права защищены.</p>
-        </div>
+    <footer class="glass-footer">
+        <p>© 2024 Yasuyuki Toskovat'</p>
     </footer>
 
     <script src="script.js"></script>

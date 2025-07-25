@@ -1,117 +1,53 @@
 <!DOCTYPE html>
-<html lang="ru" data-theme="dark">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yasuyuki Toskovat' | Exclusive Merch</title>
-    <!-- Шрифты -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-    <!-- Стили -->
+    <title>Yasuyuki Toskovat' | Premium Apparel</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;700&display=swap">
     <link rel="stylesheet" href="/style.css">
-    <!-- GSAP для анимаций -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-    <!-- Иконка -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👕</text></svg>">
 </head>
 <body>
-    <!-- Прелоадер -->
-    <div class="loader">
-        <div class="loader-spinner"></div>
-    </div>
-
-    <!-- Кастомный курсор -->
-    <div class="cursor"></div>
-
-    <!-- Золотые частицы на фоне -->
-    <div class="gold-particles"></div>
-
-    <!-- Хедер -->
-    <header class="glass-header">
-        <h1 class="logo">Yasuyuki <span>Toskovat'</span></h1>
-        <div class="header-actions">
-            <button class="theme-toggle">🌓</button>
-            <a href="https://t.me/your_telegram" class="tg-button" target="_blank">
-                <span>Order in Telegram</span>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z" fill="currentColor"/>
-                </svg>
-            </a>
-        </div>
+    <header class="apple-header">
+        <nav>
+            <a href="#" class="logo">Yasuyuki <span>Toskovat'</span></a>
+            <div class="nav-links">
+                <a href="#collection">Collection</a>
+                <a href="#about">About</a>
+                <a href="https://t.me/TOCKOBATT" target="_blank">Order</a>
+            </div>
+        </nav>
     </header>
 
-    <!-- Основной контент -->
     <main>
-        <!-- Герой-секция -->
         <section class="hero">
             <div class="hero-content">
-                <h2 class="title">Exclusive <span>Collection</span></h2>
-                <p class="subtitle">Limited edition premium t-shirts</p>
-                <div class="scrolldown-animation">
-                    <div class="mouse"></div>
-                </div>
+                <h1 data-aos="fade-up">Elevated Essentials</h1>
+                <p data-aos="fade-up" data-aos-delay="100">Crafted for those who value precision and elegance.</p>
+                <a href="#collection" class="cta-button" data-aos="fade-up" data-aos-delay="200">View Collection</a>
             </div>
         </section>
 
-        <!-- О бренде -->
-        <section class="about">
-            <div class="glass-card">
-                <div class="gold-divider"></div>
-                <h2>«Quality is not an act, it's a habit»</h2>
-                <p>Each piece is crafted from premium Italian cotton with hand-finished details. Limited to 50 pieces worldwide.</p>
-                <div class="gold-divider"></div>
-            </div>
-        </section>
-
-        <!-- Товары -->
-        <section class="shop" id="shop">
-            <h2 class="section-title">Current Collection</h2>
-            <div class="products">
-                <!-- Товар 1 -->
-                <div class="product-card">
-                    <div class="product-badge">Limited</div>
+        <section id="collection" class="collection">
+            <h2 data-aos="fade-up">The Collection</h2>
+            <div class="products-grid">
+                <div class="product-card" data-aos="fade-up">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Black Edition T-Shirt">
+                        <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Premium T-Shirt">
                     </div>
-                    <div class="product-info">
-                        <h3>Noir Édition</h3>
-                        <div class="price">9 990 ₽</div>
-                        <div class="product-description">
-                            <p>• 100% Italian cotton<br>• Hand-printed<br>• Limited to 50 pieces</p>
-                        </div>
-                        <button class="buy-button pulse">Add to cart</button>
-                    </div>
+                    <h3>Signature Tee</h3>
+                    <p class="price">$290</p>
+                    <button class="add-to-cart">Select</button>
                 </div>
-
-                <!-- Товар 2 -->
-                <div class="product-card">
-                    <div class="product-badge">New</div>
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1527719327859-c6ce80353573?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Signature T-Shirt">
-                    </div>
-                    <div class="product-info">
-                        <h3>Signature White</h3>
-                        <div class="price">8 490 ₽</div>
-                        <div class="product-description">
-                            <p>• Organic cotton<br>• Gold foil details<br>• Numbered series</p>
-                        </div>
-                        <button class="buy-button pulse">Add to cart</button>
-                    </div>
-                </div>
+                <!-- Добавьте больше товаров -->
             </div>
         </section>
     </main>
 
-    <!-- Футер -->
-    <footer class="glass-footer">
-        <div class="gold-divider"></div>
+    <footer class="apple-footer">
         <p>© 2024 Yasuyuki Toskovat'. All rights reserved.</p>
-        <a href="https://t.me/TOCKOBATT" class="tg-button footer-button" target="_blank">
-            <span>Contact in Telegram</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z" fill="currentColor"/>
-            </svg>
-        </a>
     </footer>
 
     <script src="/script.js"></script>

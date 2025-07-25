@@ -1,83 +1,125 @@
 <!DOCTYPE html>
-<html lang="ru" data-theme="dark">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yasuyuki Toskovat' | Premium Apparel</title>
+    <title>Yasuyuki Toskovat' | Haute Couture</title>
     <style>
-        /* Временные стили для проверки отображения */
+        /* Базовые стили для мгновенной загрузки */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
             margin: 0;
             padding: 0;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        header, footer {
-            padding: 20px;
-            background: #121212;
-            color: white;
-        }
-        main {
-            flex: 1;
-            padding: 20px;
-        }
-        [data-theme="light"] {
-            background: #f5f5f7;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f8f5f2;
             color: #1a1a1a;
+            opacity: 0;
+            animation: fadeIn 1s 0.3s forwards;
         }
-        [data-theme="light"] header,
-        [data-theme="light"] footer {
-            background: #ffffff;
-            color: #1a1a1a;
-            border-bottom: 1px solid #e5e5e7;
-        }
+        @keyframes fadeIn { to { opacity: 1; } }
     </style>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="container">
-                <a href="#" class="logo">Yasuyuki <span>Toskovat'</span></a>
-                <div class="nav-right">
-                    <button class="theme-toggle">🌓</button>
-                    <a href="https://t.me/your_telegram" class="order-btn" target="_blank">Order</a>
-                </div>
+    <div class="preloader">
+        <div class="preloader-logo">YT</div>
+    </div>
+
+    <header class="main-header">
+        <div class="header-inner">
+            <div class="logo-wrapper">
+                <span class="logo">Yasuyuki</span>
+                <span class="logo-sub">Toskovat'</span>
             </div>
-        </nav>
+            <nav class="main-nav">
+                <a href="#collection" class="nav-link">Collection</a>
+                <a href="#philosophy" class="nav-link">Philosophy</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button class="cart-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4H6z" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M16 10a4 4 0 1 1-8 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="container">
-                <h1>Timeless Elegance</h1>
-                <p>Where craftsmanship meets contemporary design</p>
-                <a href="#collection" class="cta-btn">View Collection</a>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-line">Redefining</span>
+                    <span class="title-line">Modern Luxury</span>
+                </h1>
+                <p class="hero-subtitle">Each piece is a manifesto of exceptional craftsmanship</p>
+                <a href="#collection" class="hero-cta">
+                    <span>Explore Collection</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1595341595379-cf1cd0fb7fb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Luxury Apparel">
             </div>
         </section>
 
-        <section id="collection" class="collection">
-            <div class="container">
-                <h2>The Collection</h2>
-                <div class="products-grid">
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Signature Tee">
-                        </div>
-                        <h3>Signature Tee</h3>
-                        <p class="price">$290</p>
-                        <button class="add-to-cart">Select</button>
+        <section id="collection" class="collection-section">
+            <div class="section-header">
+                <h2 class="section-title">The Collection</h2>
+                <p class="section-description">SS24 Limited Edition</p>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <article class="product-card">
+                    <div class="product-media">
+                        <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Signature Blazer">
+                        <div class="product-badge">Limited</div>
                     </div>
-                </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Signature Blazer</h3>
+                        <p class="product-description">Handcrafted from premium Italian wool</p>
+                        <div class="product-footer">
+                            <span class="product-price">€2,490</span>
+                            <button class="product-cta">Reserve</button>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Product 2 -->
+                <article class="product-card">
+                    <div class="product-media">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Silk Shirt">
+                        <div class="product-badge">New</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Silk Shirt</h3>
+                        <p class="product-description">100% Japanese mulberry silk</p>
+                        <div class="product-footer">
+                            <span class="product-price">€890</span>
+                            <button class="product-cta">Reserve</button>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>© 2024 Yasuyuki Toskovat'. All rights reserved.</p>
+    <footer class="main-footer">
+        <div class="footer-inner">
+            <div class="footer-logo">YT</div>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Stockists</a>
+                <a href="#" class="footer-link">Journal</a>
+                <a href="#" class="footer-link">Client Care</a>
+            </div>
+            <div class="footer-cta">
+                <p>For private appointments</p>
+                <a href="mailto:contact@toskovat.com" class="footer-email">contact@toskovat.com</a>
+            </div>
         </div>
     </footer>
 

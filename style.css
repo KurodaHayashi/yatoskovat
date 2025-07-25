@@ -1,23 +1,21 @@
 :root {
-    /* Светлая тема */
-    --bg: #ffffff;
-    --text: #1a1a1a;
-    --accent: #2c2c2c;
-    --card-bg: #f8f8f8;
-    --border: rgba(0, 0, 0, 0.1);
-    --btn-bg: #1a1a1a;
-    --btn-text: #ffffff;
-}
-
-[data-theme="dark"] {
-    /* Тёмная тема */
+    /* Тёмная тема по умолчанию */
     --bg: #121212;
     --text: #e0e0e0;
-    --accent: #ffffff;
     --card-bg: #1e1e1e;
     --border: rgba(255, 255, 255, 0.1);
     --btn-bg: #ffffff;
     --btn-text: #121212;
+}
+
+[data-theme="light"] {
+    /* Светлая тема */
+    --bg: #f5f5f7;
+    --text: #1a1a1a;
+    --card-bg: #ffffff;
+    --border: rgba(0, 0, 0, 0.1);
+    --btn-bg: #1a1a1a;
+    --btn-text: #ffffff;
 }
 
 /* Базовые стили */
@@ -39,8 +37,8 @@ body {
 /* Хедер */
 header {
     padding: 24px 0;
-    position: fixed;
-    width: 100%;
+    position: sticky;
+    top: 0;
     z-index: 100;
     background: var(--bg);
     border-bottom: 1px solid var(--border);
@@ -63,22 +61,15 @@ nav {
     font-weight: 400;
 }
 
-/* Кнопка темы */
-.theme-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 8px;
-    margin-right: 16px;
-    color: var(--text);
+/* Основной контент */
+main {
+    padding: 40px 0;
 }
 
-/* Герой-секция */
 .hero {
-    height: 100vh;
+    height: calc(100vh - 80px);
     display: flex;
     align-items: center;
-    padding-top: 80px;
 }
 
 .hero h1 {
@@ -89,7 +80,7 @@ nav {
 
 /* Коллекция */
 .collection {
-    padding: 100px 0;
+    padding: 80px 0;
 }
 
 .products-grid {
@@ -136,35 +127,31 @@ nav {
     font-weight: 500;
 }
 
-.add-to-cart {
-    width: calc(100% - 40px);
-    margin: 0 20px 20px;
-    padding: 12px;
+/* Кнопки */
+.order-btn, .cta-btn, .add-to-cart {
+    display: inline-block;
+    padding: 12px 24px;
     background: var(--btn-bg);
     color: var(--btn-text);
     border: none;
     border-radius: 6px;
     cursor: pointer;
     transition: opacity 0.3s ease;
+    text-decoration: none;
+    font-size: 1rem;
 }
 
-.add-to-cart:hover {
+.order-btn:hover, .cta-btn:hover, .add-to-cart:hover {
     opacity: 0.9;
 }
 
-/* Анимации */
-[data-aos] {
-    opacity: 0;
-    transition: all 0.6s ease;
+.cta-btn {
+    margin-top: 20px;
 }
 
-[data-aos="fade-up"] {
-    transform: translateY(20px);
-}
-
-[data-aos].aos-animate {
-    opacity: 1;
-    transform: translateY(0);
+.add-to-cart {
+    width: calc(100% - 40px);
+    margin: 0 20px 20px;
 }
 
 /* Футер */
@@ -174,21 +161,13 @@ footer {
     text-align: center;
 }
 
-/* Кнопки */
-.order-btn, .cta-btn {
-    display: inline-block;
-    padding: 12px 24px;
-    background: var(--btn-bg);
-    color: var(--btn-text);
-    text-decoration: none;
-    border-radius: 6px;
-    transition: opacity 0.3s ease;
-}
-
-.order-btn:hover, .cta-btn:hover {
-    opacity: 0.9;
-}
-
-.cta-btn {
-    margin-top: 20px;
+/* Переключатель темы */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    margin-right: 16px;
+    color: var(--text);
+    font-size: 1.2rem;
 }

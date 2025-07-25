@@ -3,123 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yasuyuki Toskovat' | Haute Couture</title>
-    <style>
-        /* Базовые стили для мгновенной загрузки */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-            background: #f8f5f2;
-            color: #1a1a1a;
-            opacity: 0;
-            animation: fadeIn 1s 0.3s forwards;
-        }
-        @keyframes fadeIn { to { opacity: 1; } }
-    </style>
+    <title>Yasuyuki Toskovat' | Высокая мода</title>
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Прелоадер -->
     <div class="preloader">
-        <div class="preloader-logo">YT</div>
+        <div class="preloader-logo">
+            <div class="logo-circle"></div>
+            <span>YT</span>
+        </div>
     </div>
 
+    <!-- Главное меню -->
     <header class="main-header">
-        <div class="header-inner">
+        <div class="header-container">
             <div class="logo-wrapper">
-                <span class="logo">Yasuyuki</span>
+                <span class="logo-main">Yasuyuki</span>
                 <span class="logo-sub">Toskovat'</span>
             </div>
+            
             <nav class="main-nav">
-                <a href="#collection" class="nav-link">Collection</a>
-                <a href="#philosophy" class="nav-link">Philosophy</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#collection" class="nav-link">Коллекция</a>
+                <a href="#about" class="nav-link">Философия</a>
+                <a href="#contact" class="nav-link">Контакты</a>
             </nav>
+            
             <div class="header-actions">
+                <button class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
                 <button class="cart-btn">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4H6z" stroke="currentColor" stroke-width="1.5"/>
-                        <path d="M16 10a4 4 0 1 1-8 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                    </svg>
+                    <i class="fas fa-shopping-bag"></i>
                 </button>
             </div>
         </div>
     </header>
 
-    <main>
-        <section class="hero-section">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    <span class="title-line">Redefining</span>
-                    <span class="title-line">Modern Luxury</span>
-                </h1>
-                <p class="hero-subtitle">Each piece is a manifesto of exceptional craftsmanship</p>
-                <a href="#collection" class="hero-cta">
-                    <span>Explore Collection</span>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </a>
-            </div>
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1595341595379-cf1cd0fb7fb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Luxury Apparel">
-            </div>
-        </section>
+    <!-- Герой-секция -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">Исключительное</span>
+                <span class="title-line">качество</span>
+            </h1>
+            <p class="hero-text">Каждое изделие создаётся вручную с безупречным вниманием к деталям</p>
+            <a href="#collection" class="hero-cta">
+                <span>Смотреть коллекцию</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+        
+        <div class="hero-image">
+            <div class="image-overlay"></div>
+            <img src="https://images.unsplash.com/photo-1595341595379-cf1cd0fb7fb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Премиальная одежда">
+        </div>
+    </section>
 
-        <section id="collection" class="collection-section">
-            <div class="section-header">
-                <h2 class="section-title">The Collection</h2>
-                <p class="section-description">SS24 Limited Edition</p>
-            </div>
+    <!-- Коллекция -->
+    <section id="collection" class="collection">
+        <div class="section-header">
+            <h2 class="section-title">Коллекция</h2>
+            <p class="section-subtitle">Весна-Лето 2024</p>
+        </div>
+        
+        <div class="products-grid">
+            <!-- Товар 1 -->
+            <article class="product-card">
+                <div class="product-badge">Лимитированная серия</div>
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Классический блейзер">
+                    <button class="quick-view">Быстрый просмотр</button>
+                </div>
+                <div class="product-info">
+                    <h3>Классический блейзер</h3>
+                    <p>Итальянская шерсть высшего качества</p>
+                    <div class="product-footer">
+                        <span class="price">189 000 ₽</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                </div>
+            </article>
             
-            <div class="products-grid">
-                <!-- Product 1 -->
-                <article class="product-card">
-                    <div class="product-media">
-                        <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Signature Blazer">
-                        <div class="product-badge">Limited</div>
+            <!-- Товар 2 -->
+            <article class="product-card">
+                <div class="product-badge">Новинка</div>
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Шёлковая рубашка">
+                    <button class="quick-view">Быстрый просмотр</button>
+                </div>
+                <div class="product-info">
+                    <h3>Шёлковая рубашка</h3>
+                    <p>100% японский шёлк</p>
+                    <div class="product-footer">
+                        <span class="price">89 000 ₽</span>
+                        <button class="add-to-cart">В корзину</button>
                     </div>
-                    <div class="product-info">
-                        <h3 class="product-title">Signature Blazer</h3>
-                        <p class="product-description">Handcrafted from premium Italian wool</p>
-                        <div class="product-footer">
-                            <span class="product-price">€2,490</span>
-                            <button class="product-cta">Reserve</button>
-                        </div>
-                    </div>
-                </article>
-                
-                <!-- Product 2 -->
-                <article class="product-card">
-                    <div class="product-media">
-                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Silk Shirt">
-                        <div class="product-badge">New</div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">Silk Shirt</h3>
-                        <p class="product-description">100% Japanese mulberry silk</p>
-                        <div class="product-footer">
-                            <span class="product-price">€890</span>
-                            <button class="product-cta">Reserve</button>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-    </main>
+                </div>
+            </article>
+        </div>
+    </section>
 
+    <!-- О бренде -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>Философия бренда</h2>
+            <p>Yasuyuki Toskovat' — это синтез японского минимализма и европейского качества. Каждое изделие создаётся ограниченным тиражом с использованием исключительных материалов.</p>
+            <a href="#contact" class="about-cta">Связаться с нами</a>
+        </div>
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="О бренде">
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Контакты</h2>
+                <p>Москва, ул. Петровка 21</p>
+                <p>Ежедневно с 11:00 до 21:00</p>
+                <a href="tel:+79991234567">+7 999 123-45-67</a>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Запись на примерку</h3>
+                <form>
+                    <input type="text" placeholder="Имя" required>
+                    <input type="tel" placeholder="Телефон" required>
+                    <textarea placeholder="Комментарий"></textarea>
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
     <footer class="main-footer">
-        <div class="footer-inner">
-            <div class="footer-logo">YT</div>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <span>YT</span>
+            </div>
             <div class="footer-links">
-                <a href="#" class="footer-link">Stockists</a>
-                <a href="#" class="footer-link">Journal</a>
-                <a href="#" class="footer-link">Client Care</a>
+                <a href="#">Доставка и оплата</a>
+                <a href="#">Возврат</a>
+                <a href="#">Уход за изделиями</a>
+                <a href="#">Конфиденциальность</a>
             </div>
-            <div class="footer-cta">
-                <p>For private appointments</p>
-                <a href="mailto:contact@toskovat.com" class="footer-email">contact@toskovat.com</a>
+            <div class="footer-newsletter">
+                <h4>Подпишитесь на новости</h4>
+                <form>
+                    <input type="email" placeholder="Ваш email">
+                    <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                </form>
             </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2024 Yasuyuki Toskovat'. Все права защищены.</p>
         </div>
     </footer>
 

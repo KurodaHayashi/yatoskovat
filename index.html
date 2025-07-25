@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yasuyuki Toskovat’ | T-Shirts</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Подключаем GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <div class="loader"></div>
+    <div class="cursor"></div>
+    <div class="silk-texture"></div> <!-- Шёлковый фон -->
+    <div class="golden-particles"></div> <!-- Золотые частицы -->
+
+    <button class="theme-toggle">🌓</button>
+
+    <header>
+        <h1 class="logo">Yasuyuki <span>Toskovat’</span></h1>
+        <a href="https://t.me/TOCKOBATT" class="tg-button" target="_blank">
+            <span>Заказать в Telegram</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z" fill="currentColor"/>
+            </svg>
+        </a>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2 class="title">Эксклюзивные <span>футболки</span></h2>
+                <p class="subtitle">Для тех, кто ценит исключительное качество</p>
+                <a href="#shop" class="cta-button pulse">Смотреть коллекцию</a>
+            </div>
+            <div class="hero-image" id="parallax"></div>
+        </section>
+
+        <section class="about">
+            <div class="glass-card">
+                <div class="gold-divider"></div> <!-- Золотая линия -->
+                <h2>«Качество — это не случайность, это результат высоких стандартов»</h2>
+                <p>Итальянский хлопок, ручная печать, ограниченный тираж. Каждая футболка — это инвестиция в ваш стиль.</p>
+                <div class="gold-divider"></div>
+            </div>
+        </section>
+
+        <section class="shop" id="shop">
+            <h2 class="section-title">Коллекция</h2>
+            <div class="products">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/600x700/111111/333333?text=Luxury+Black" alt="Футболка Noir Édition">
+                    </div>
+                    <h3>Noir Édition</h3>
+                    <p class="price">9 990 ₽</p>
+                    <button class="buy-button pulse">Купить</button>
+                </div>
+                <!-- Остальные товары -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="gold-divider"></div>
+        <p>© 2024 Yasuyuki Toskovat’. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

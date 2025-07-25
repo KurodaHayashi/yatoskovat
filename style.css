@@ -1,32 +1,61 @@
 :root {
-    --white: #ffffff;
-    --gray-1: #f5f5f7;
-    --gray-2: #e5e5e7;
-    --gray-9: #1d1d1f;
-    --black: #000000;
+    /* Светлая тема */
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --accent: #2c2c2c;
+    --card-bg: #f8f8f8;
+    --border: rgba(0, 0, 0, 0.1);
+    --btn-bg: #1a1a1a;
+    --btn-text: #ffffff;
 }
 
+[data-theme="dark"] {
+    /* Тёмная тема */
+    --bg: #121212;
+    --text: #e0e0e0;
+    --accent: #ffffff;
+    --card-bg: #1e1e1e;
+    --border: rgba(255, 255, 255, 0.1);
+    --btn-bg: #ffffff;
+    --btn-text: #121212;
+}
+
+/* Базовые стили */
 body {
-    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: var(--white);
-    color: var(--gray-9);
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
     margin: 0;
     line-height: 1.6;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Хедер как у Apple */
-.apple-header {
-    padding: 22px 5%;
-    backdrop-filter: blur(10px);
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Хедер */
+header {
+    padding: 24px 0;
     position: fixed;
     width: 100%;
     z-index: 100;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
-    font-weight: 700;
-    color: var(--black);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text);
     text-decoration: none;
 }
 
@@ -34,44 +63,99 @@ body {
     font-weight: 400;
 }
 
+/* Кнопка темы */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    margin-right: 16px;
+    color: var(--text);
+}
+
 /* Герой-секция */
 .hero {
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 5%;
+    padding-top: 80px;
 }
 
 .hero h1 {
-    font-size: clamp(2rem, 5vw, 4rem);
-    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 600;
     margin-bottom: 1rem;
 }
 
-/* Сетка товаров */
+/* Коллекция */
+.collection {
+    padding: 100px 0;
+}
+
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 5%;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
 }
 
 .product-card {
-    transition: all 0.3s ease;
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
 .product-card:hover {
     transform: translateY(-5px);
 }
 
+.product-image {
+    height: 380px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.03);
+}
+
+.product-card h3 {
+    margin: 20px 20px 10px;
+    font-size: 1.1rem;
+}
+
+.price {
+    margin: 0 20px 20px;
+    font-weight: 500;
+}
+
+.add-to-cart {
+    width: calc(100% - 40px);
+    margin: 0 20px 20px;
+    padding: 12px;
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.add-to-cart:hover {
+    opacity: 0.9;
+}
+
 /* Анимации */
 [data-aos] {
     opacity: 0;
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: all 0.6s ease;
 }
 
 [data-aos="fade-up"] {
@@ -81,4 +165,30 @@ body {
 [data-aos].aos-animate {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Футер */
+footer {
+    padding: 40px 0;
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
+
+/* Кнопки */
+.order-btn, .cta-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: opacity 0.3s ease;
+}
+
+.order-btn:hover, .cta-btn:hover {
+    opacity: 0.9;
+}
+
+.cta-btn {
+    margin-top: 20px;
 }
